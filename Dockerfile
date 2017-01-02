@@ -6,7 +6,7 @@ RUN apt-get install python-mysqldb -y
 #---
 RUN mkdir /opt/tracsetup
 #COPY $WORKSPACE/* /opt/tracsetup/
-ADD https://svn.edgewall.org/repos/trac/trunk /opt/tracsetup/
+ADD $WORKSPACE/* /opt/tracsetup/
 RUN python /opt/tracsetup/setup.py install
 #---
 RUN mkdir /opt/test
