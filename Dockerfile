@@ -7,10 +7,11 @@ RUN apt-get install python-mysqldb -y
 RUN mkdir /opt/tracsetup
 COPY $WORKSPACE/trunk/ /opt/tracsetup/
 #ADD $WORKSPACE/ /opt/tracsetup
-RUN python /opt/tracsetup/setup.py install
+RUN apt-get install sudo
+RUN sudo python /opt/tracsetup/setup.py install
 #---
 RUN mkdir /opt/test
-RUN apt-get install sudo
+#RUN apt-get install sudo
 COPY docker-entrypoint.sh /usr/local/bin/
 COPY test.sh /opt/test.sh
 RUN chmod 777 /opt/test.sh
