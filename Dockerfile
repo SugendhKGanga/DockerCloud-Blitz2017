@@ -2,12 +2,12 @@ FROM ubuntu
 RUN apt-get update
 RUN apt-get install apache2 apache2-utils libapache2-mod-python python-setuptools python-genshi -y
 RUN apt-get install python-mysqldb -y
-RUN apt-get install trac -y
+#RUN apt-get install trac -y
 #---
 RUN mkdir /opt/tracsetup
-#COPY $WORKSPACE/* /opt/tracsetup/
+COPY $WORKSPACE/trunk/ /opt/tracsetup/
 #ADD $WORKSPACE/ /opt/tracsetup
-#RUN python /opt/tracsetup/setup.py install
+RUN python /opt/tracsetup/setup.py install
 #---
 RUN mkdir /opt/test
 RUN apt-get install sudo
