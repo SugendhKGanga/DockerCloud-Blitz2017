@@ -5,7 +5,7 @@ RUN apt-get install python-mysqldb -y
 #RUN apt-get install trac -y
 #---
 RUN mkdir /opt/tracsetup
-COPY $WORKSPACE/* /opt/tracsetup
+COPY $WORKSPACE/* /opt/tracsetup/
 RUN python /opt/tracsetup/setup.py install
 #---
 RUN mkdir /opt/test
