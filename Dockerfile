@@ -7,8 +7,8 @@ RUN apt-get install python-mysqldb -y
 RUN mkdir /opt/tracsetup
 COPY $WORKSPACE/trunk/ /opt/tracsetup/
 #ADD $WORKSPACE/ /opt/tracsetup
-RUN apt-get install sudo
-RUN cd /opt/tracsetup/ && python ./setup.py install
+#RUN apt-get install sudo
+#RUN cd /opt/tracsetup/ && python ./setup.py install
 #---
 RUN mkdir /opt/test
 #RUN apt-get install sudo
