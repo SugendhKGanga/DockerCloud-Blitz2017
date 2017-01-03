@@ -5,6 +5,7 @@ RUN apt-get install python-mysqldb -y
 RUN apt-get update && apt-get install libmysqlclient-dev -y
 #RUN apt-get update && apt-get install mysql-server -y
 RUN apt-get -y install python-pip
+RUN pip install MySQL-python
 #RUN apt-get install trac -y
 #---
 RUN mkdir /opt/tracsetup
