@@ -5,11 +5,11 @@ RUN apt-get install python-mysqldb -y
 RUN apt-get update && apt-get install libmysqlclient-dev -y
 #RUN apt-get update && apt-get install mysql-server -y
 #RUN apt-get -y install python-pip
-#RUN apt-get install trac -y
+RUN apt-get install trac -y
 #---
-RUN mkdir /opt/tracsetup
-COPY $WORKSPACE/trunk/ /opt/tracsetup/
-RUN cd /opt/tracsetup/ && python ./setup.py install
+#RUN mkdir /opt/tracsetup
+#COPY $WORKSPACE/trunk/ /opt/tracsetup/
+#RUN cd /opt/tracsetup/ && python ./setup.py install
 #---
 RUN mkdir /opt/test
 RUN apt-get install sudo
