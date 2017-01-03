@@ -3,7 +3,7 @@ RUN apt-get update
 RUN apt-get install apache2 apache2-utils libapache2-mod-python python-setuptools python-genshi -y
 RUN apt-get install python-mysqldb -y
 RUN apt-get update && apt-get install libmysqlclient-dev -y
-RUN apt-get update && apt-get install mysql-server -y
+#RUN apt-get update && apt-get install mysql-server -y
 #RUN apt-get -y install python-pip
 #RUN apt-get install trac -y
 #---
